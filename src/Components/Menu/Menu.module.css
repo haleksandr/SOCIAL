@@ -1,0 +1,27 @@
+.appMenu {
+    grid-area: menu;
+    background-color: #ff9752;
+    border: 5px solid black;
+}
+
+.item {
+    color: red;
+    text-decoration: none;
+}
+
+.item:hover {
+    color: black;
+    border: 1px solid black;
+}
+
+.item:active {
+    color: red;
+}
+
+.items {
+    list-style-type: none;
+}
+
+.activeItem {
+    font-weight: bold;
+}

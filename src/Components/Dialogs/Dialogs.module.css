@@ -1,0 +1,23 @@
+.dialogs {
+    display: grid;
+
+    grid-template-areas:
+    "dialogs messages";
+
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+
+    padding: 10px;
+}
+
+.dialogsItems {
+    grid-area: dialogs;
+}
+
+.activeDialog {
+    font-weight: bold;
+}
+
+.messagesItems {
+    grid-area: messages;
+}

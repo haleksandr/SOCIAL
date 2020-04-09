@@ -1,10 +1,11 @@
 import React from 'react';
+import s from './NewPost.module.css';
 
-const NewPost = () => {
+const NewPost = (props) => {
     return (
-        <div>
+        <div className={s.newPost}>
             <input value="your news..." type="text"/>
-            <button>SEND</button>
+            <button>ADD POST</button>
         </div>
     )
 }

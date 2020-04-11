@@ -3,19 +3,19 @@ import s from './MyPost.module.css';
 import NewPost from './NewPost/NewPost';
 import Post from './Post/Post';
 
-const MyPost = (psops) => {
+const MyPost = (props) => {
+    // debugger;
 
-    let postData = [
-        {id: 1, likeCount: 123, message: "FIRST POST"},
-        {id: 2, likesCount: 321, message: "SECOND POST"}
-    ]
+    let postElements = props.post.map( (post) => {
+        return <Post likeCount={post.likeCount} message={post.messages} />
+    } )
 
     return (
         <div className={s.myPost} >
             <p >MY POST</p>
             <NewPost />
-            <Post likeCount={postData[0].likeCount} message={postData[0].message} />
-            <Post likeCount={postData[1].likesCount} message={postData[1].message} />
+            { postElements }
+            { postElements }
         </div>
     )
 }

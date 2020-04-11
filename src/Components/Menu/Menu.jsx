@@ -14,6 +14,9 @@ const Menu = () => {
                         <NavLink className={s.item} activeClassName={s.activeItem} to="/dialogs">Dialogs</NavLink>
                     </li>
                     <li>
+                        <NavLink className={s.item} activeClassName={s.activeItem} to="/users">Users</NavLink>
+                    </li>
+                    <li>
                         <NavLink className={s.item} activeClassName={s.activeItem} to="/news">News</NavLink>
                     </li>
                     <li>

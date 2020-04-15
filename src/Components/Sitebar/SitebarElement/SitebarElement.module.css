@@ -1,0 +1,15 @@
+.sitebarElement {
+    display: grid;
+    grid-auto-flow: column;
+    border: 1px solid black;
+    margin: 5px;
+    text-align: center;
+}
+
+.sitebarElement:hover {
+    background-color: rgb(235, 137, 77);
+}
+
+.sizeName {
+    font-size: 12px;
+}

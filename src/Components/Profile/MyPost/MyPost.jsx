@@ -13,8 +13,7 @@ const MyPost = (props) => {
     return (
         <div className={s.myPost} >
             <p >MY POST</p>
-            <NewPost />
-            { postElements }
+            <NewPost addPost={props.addPost} />
             { postElements }
         </div>
     )

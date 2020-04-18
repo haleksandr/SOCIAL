@@ -10,6 +10,7 @@ import Music from "./Components/Music/Music";
 import Settings from "./Components/Settings/Settings";
 import Users from './Components/Users/Users';
 
+
 const App = (props) => {
     return (
             <div className="app-wrapper">
@@ -18,7 +19,9 @@ const App = (props) => {
                 <div className="app-wrapper-content">
                     <Route path="/profile"
                            render={ () => <Profile post={props.state.profilePage.postData}
-                                                   addPost={props.addPost} /> } />
+                                                   addPost={props.addPost}
+                                                   addSymbol={props.addSymbol}
+                                                   newPostText={props.newPostText} /> } />
                     <Route path="/dialogs"
                            render={ () => <Dialogs messages={props.state.dialogsPage.usersMessage}
                                                    dialogs={props.state.dialogsPage.usersDialogs} />  } />

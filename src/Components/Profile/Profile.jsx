@@ -15,10 +15,10 @@ const Profile = (props) => {
             </div>
                 <MyProfile />
             <div>
-                <MyPost post={props.post} addPost={props.addPost} />
+                <MyPost post={props.post} addPost={props.addPost} addSymbol={props.addSymbol} newPostText={props.newPostText} />
             </div>
         </div>
     )
-}
+};
 
 export default Profile;

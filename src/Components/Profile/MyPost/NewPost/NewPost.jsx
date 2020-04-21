@@ -1,28 +1,36 @@
 import React from 'react';
 import s from './NewPost.module.css';
-import state from '../../../../redux/state';
+import {addPostAC, updateNewPostTextAC} from './../../../../redux/state';
 
 const NewPost = (props) => {
-    // debugger;
+
     let createNewElement = React.createRef();
 
     let addPostState = () => {
-        // debugger;
-        let text = createNewElement.current.value;
-        props.addPost(text);
-        console.log(text);
+        debugger;
+        // let text = createNewElement.current.value;
+        // let action = addPostAC(text);
+        props.dispatch(addPostAC());
+        console.log('add post button');
     };
 
-    let addSymbolState = () => {
+
+    /*let addSymbolState = () => {
         let symbol = createNewElement.current.value;
-        props.addSymbol(symbol);
-        console.log(symbol);
-    };
+        let action = addSymbolAC(symbol);
+        props.dispatch(action);
+    };*/
+
+    let onPostChange = () => {
+        let text = createNewElement.current.value;
+        props.dispatch(updateNewPostTextAC(text));
+        console.log('change post');
+    }
 
     return (
         <div className={s.newPost}>
-            <textarea ref={createNewElement} onChange={addSymbolState} value={props.newPostText} />
-            <button onClick={ addPostState }>ADD POST</button>
+            <textarea ref={createNewElement} onChange={onPostChange} value={props.newPostText}/>
+            <button onClick={addPostState}>ADD POST</button>
         </div>
     )
 };

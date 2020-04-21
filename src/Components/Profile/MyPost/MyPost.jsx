@@ -13,7 +13,7 @@ const MyPost = (props) => {
     return (
         <div className={s.myPost} >
             <p >MY POST</p>
-            <NewPost addPost={props.addPost} addSymbol={props.addSymbol} newPostText={props.newPostText} />
+            <NewPost dispatch={props.dispatch} />
             { postElements }
         </div>
     )

@@ -1,31 +1,20 @@
 import React from 'react';
 import s from './NewPost.module.css';
-import {addPostAC, updateNewPostTextAC} from './../../../../redux/state';
+import {addPostAC, updateNewPostTextAC} from './../../../../redux/profile-reducer';
+import store from './../../../../redux/state';
 
 const NewPost = (props) => {
-
     let createNewElement = React.createRef();
 
     let addPostState = () => {
-        debugger;
-        // let text = createNewElement.current.value;
-        // let action = addPostAC(text);
-        props.dispatch(addPostAC());
-        console.log('add post button');
+        props.dispatch(addPostAC())
     };
-
-
-    /*let addSymbolState = () => {
-        let symbol = createNewElement.current.value;
-        let action = addSymbolAC(symbol);
-        props.dispatch(action);
-    };*/
 
     let onPostChange = () => {
         let text = createNewElement.current.value;
-        props.dispatch(updateNewPostTextAC(text));
-        console.log('change post');
-    }
+        let action = updateNewPostTextAC(text);
+        props.dispatch(action);
+    };
 
     return (
         <div className={s.newPost}>

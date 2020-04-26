@@ -6,12 +6,14 @@ import App from './App';
 import store from './redux/state';
 
 let rerenderEntyreTree = (state) => {
+    // debugger;
     ReactDOM.render(
         <React.StrictMode>
             <BrowserRouter>
                 <App state={state}
                      dispatch={store.dispatch.bind(store)}
-                     /*newPostText={store.newPostText}*/ />
+                     newPostText={store.getState().newPostText}
+                     newMessageText={store.getState().newMessageText}/>
             </BrowserRouter>
         </React.StrictMode>,
         document.getElementById('root')

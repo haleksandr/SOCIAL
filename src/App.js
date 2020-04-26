@@ -13,23 +13,25 @@ import Users from './Components/Users/Users';
 
 const App = (props) => {
     return (
-            <div className="app-wrapper">
-                <Header />
-                <Menu sitebar={props.state.generalPage.sitebar} />
-                <div className="app-wrapper-content">
-                    <Route path="/profile"
-                           render={ () => <Profile post={props.state.profilePage.postData}
-                                                   dispatch={props.dispatch}
-                                                   /*newPostText={props.newPostText}*/ /> } />
-                    <Route path="/dialogs"
-                           render={ () => <Dialogs messages={props.state.dialogsPage.usersMessage}
-                                                   dialogs={props.state.dialogsPage.usersDialogs} />  } />
-                    <Route path="/users" render={ () => <Users /> } />
-                    <Route path="/news" render={ () => <News /> } />
-                    <Route path="/music" render={ () => <Music /> } />
-                    <Route path="/settings" render={ () => <Settings /> } />
-                </div>
+        <div className="app-wrapper">
+            <Header/>
+            <Menu sitebar={props.state.generalPage.sitebar}/>
+            <div className="app-wrapper-content">
+                <Route path="/profile"
+                       render={() => <Profile post={props.state.profilePage.postData}
+                                              dispatch={props.dispatch}
+                                              newPostText={props.newPostText}/>}/>
+                <Route path="/dialogs"
+                       render={() => <Dialogs messages={props.state.dialogsPage.usersMessage}
+                                              dialogs={props.state.dialogsPage.usersDialogs}
+                                              dispatch={props.dispatch}
+                                              newMessageText={props.newMessageText}/>}/>
+                <Route path="/users" render={() => <Users/>}/>
+                <Route path="/news" render={() => <News/>}/>
+                <Route path="/music" render={() => <Music/>}/>
+                <Route path="/settings" render={() => <Settings/>}/>
             </div>
+        </div>
     );
 }
 

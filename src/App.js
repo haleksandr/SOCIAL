@@ -4,7 +4,7 @@ import './App.css';
 import Header from './Components/Header/Header';
 import Menu from './Components/Menu/Menu';
 import Profile from './Components/Profile/Profile';
-import DialogsContainer from "./Components/Dialogs/Dialogs";
+import DialogsContainer from "./Components/Dialogs/DialogsContainer";
 import News from "./Components/News/News";
 import Music from "./Components/Music/Music";
 import Settings from "./Components/Settings/Settings";
@@ -16,7 +16,7 @@ const App = (props) => {
     return (
         <div className="app-wrapper">
             <Header/>
-            <Menu sitebar={props.state.generalPage.sitebar} />
+            <Menu store={props.store} />
             <div className="app-wrapper-content">
                 <Route path="/profile"
                        render={() => <Profile store={props.store}/>}/>

@@ -29,7 +29,7 @@ const Menu = (props) => {
                 </ul>
             </nav>
             <div className={s.sitebar}>
-                <Sitebar sitebar={props.sitebar} />
+                <Sitebar store={props.store} />
             </div>
         </div>
     )

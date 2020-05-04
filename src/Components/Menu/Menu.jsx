@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './Menu.module.css';
 import {NavLink} from 'react-router-dom';
-import Sitebar from '../Sitebar/Sitebar';
+import SitebarContainer from '../Sitebar/SitebarContainer';
 
 const Menu = (props) => {
     return (
@@ -29,7 +29,7 @@ const Menu = (props) => {
                 </ul>
             </nav>
             <div className={s.sitebar}>
-                <Sitebar store={props.store} />
+                <SitebarContainer store={props.store} />
             </div>
         </div>
     )

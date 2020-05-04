@@ -9,6 +9,7 @@ import News from "./Components/News/News";
 import Music from "./Components/Music/Music";
 import Settings from "./Components/Settings/Settings";
 import Users from './Components/Users/Users';
+import Sitebar from './Components/Sitebar/Sitebar'
 
 
 const App = (props) => {

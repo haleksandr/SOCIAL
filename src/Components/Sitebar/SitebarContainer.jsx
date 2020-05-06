@@ -5,14 +5,12 @@ import Sitebar from './Sitebar';
 
 let mapStateToProps = (state) => {
     return {
-menuPage: state.menuPage
+        menuPage: state.menuPage
     }
 };
 
 let mapDispatchToProps = (dispatch) => {
-    return {
-
-    }
+    return {}
 }
 
 const SitebarContainer = connect(mapStateToProps, mapDispatchToProps)(Sitebar);

@@ -1,5 +1,5 @@
 import React from 'react';
-import MyPost from "./MyPost/MyPost";
+import MyPostContainer from "./MyPost/MyPostContainer";
 import MyProfile from "./MyProfile/MyProfile";
 import s from './Profile.module.css';
 
@@ -15,7 +15,7 @@ const Profile = (props) => {
             </div>
                 <MyProfile />
             <div>
-                <MyPost store={props.store} />
+                <MyPostContainer store={props.store} />
             </div>
         </div>
     )

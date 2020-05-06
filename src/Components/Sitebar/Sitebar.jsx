@@ -5,7 +5,7 @@ import SitebarElement from './SitebarElement/SitebarElement';
 const Sitebar = (props) => {
     // debugger;
 
-    let sitebarElement = props.sitebar.map((el) => {
+    let sitebarElement = props.menuPage.sitebar.map((el) => {
         return <SitebarElement id={el.id} name={el.name}/>
     });
 

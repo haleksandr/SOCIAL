@@ -6,9 +6,7 @@ import Post from './Post/Post';
 const MyPost = (props) => {
     // debugger;
 
-    let state = props.store.getState();
-
-    let postElements = state.profilePage.postData.map( (post) => {
+    let postElements = props.postData.map( (post) => {
         return <Post likeCount={post.likeCount} message={post.messages} />
     } );
 

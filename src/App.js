@@ -13,14 +13,13 @@ import Sitebar from './Components/Sitebar/Sitebar'
 
 
 const App = (props) => {
-    // debugger;
     return (
         <div className="app-wrapper">
             <Header/>
             <Menu store={props.store} />
             <div className="app-wrapper-content">
                 <Route path="/profile"
-                       render={() => <Profile store={props.store}/>}/>
+                       render={() => <Profile store={props.store} />}/>
                 <Route path="/dialogs"
                        render={() => <DialogsContainer store={props.store} />}/>
                 <Route path="/users" render={() => <Users/>}/>

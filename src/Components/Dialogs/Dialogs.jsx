@@ -13,13 +13,13 @@ const Dialogs = (props) => {
         return <Message id={message.id} message={message.message}/>
     });
 
-    let onMessageChange = (e) => {
+    let messageChange = (e) => {
         let text = e.target.value;
         props.onMessageChange(text);
     };
 
     let addMessage = () => {
-        props.addMessage();
+        props.onAddMessage();
     };
 
     return (
@@ -36,7 +36,7 @@ const Dialogs = (props) => {
                 </div>
                 <div className={s.addMessage}>
                     <p>ADD MESSAGE:</p>
-                    <textarea onChange={onMessageChange} value={props.newMessageText}/>
+                    <textarea onChange={messageChange} value={props.newMessageText}/>
                     <button onClick={addMessage}>add message</button>
                 </div>
             </div>

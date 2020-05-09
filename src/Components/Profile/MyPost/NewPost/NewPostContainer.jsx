@@ -5,7 +5,7 @@ import NewPost from './NewPost';
 
 let mapStateToProps = (state) => {
     return {
-        newPostText: state.profilePage.newPostText
+        profilePage: state.profilePage
     }
 };
 
@@ -16,7 +16,6 @@ let mapDispatchToProps = (dispatch) => {
         },
         onPostChange: (text) => {
             dispatch(updateNewPostTextAC(text));
-            console.log(text);
         }
     }
 };

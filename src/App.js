@@ -8,7 +8,7 @@ import DialogsContainer from "./Components/Dialogs/DialogsContainer";
 import News from "./Components/News/News";
 import Music from "./Components/Music/Music";
 import Settings from "./Components/Settings/Settings";
-import Users from './Components/Users/Users';
+import UsersContainer from './Components/Users/UsersContainer';
 import Sitebar from './Components/Sitebar/Sitebar'
 
 
@@ -22,7 +22,7 @@ const App = (props) => {
                        render={() => <Profile store={props.store} />}/>
                 <Route path="/dialogs"
                        render={() => <DialogsContainer store={props.store} />}/>
-                <Route path="/users" render={() => <Users/>}/>
+                <Route path="/users" render={() => <UsersContainer store={props.store}/>}/>
                 <Route path="/news" render={() => <News/>}/>
                 <Route path="/music" render={() => <Music/>}/>
                 <Route path="/settings" render={() => <Settings/>}/>

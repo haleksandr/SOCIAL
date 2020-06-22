@@ -9,6 +9,7 @@ let initialState = {
     newPostText: ''
 };
 
+
 const profileReducer = (state = initialState, action) => {
 
     let stateCopy;
